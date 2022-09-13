@@ -81,7 +81,7 @@ def pagination(url):
     while isNext:
         with open('page-info.html', 'w') as file:
             file.write(driver.page_source)
-        get_items(file_path='/home/kuznetsb/code/dataOX-test/page-info.html')
+        get_items(file_path='page-info.html')
         try:
             button_next = driver.find_element(By.XPATH, "/html[@id='reset']/body[@id='PageSRP']/div[@id='MainContainer']/div[@id='mainPageContent']/div[@class='layout-3 new-real-estate-srp']/div[@class='col-2 new-real-estate-srp']/main/div[@class='container-results large-images']/div[@class='bottom-bar']/div[@class='pagination']/a[@title='Next']")
             button_next.click()
